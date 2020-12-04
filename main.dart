@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:exif/exif.dart';
 
 main(){
+  printExifOf("example.jpg");
   print("good");
 }
 
