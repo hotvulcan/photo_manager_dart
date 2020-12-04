@@ -1,3 +1,4 @@
+import “exif“;
 main(){
   print("good");
 }
