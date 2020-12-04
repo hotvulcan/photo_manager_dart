@@ -8,3 +8,12 @@ https://pub.dev/packages/exif
 
 包管理？
 https://medium.com/flutter-community/deep-dive-into-the-pubspec-yaml-file-fb56ac8683b9
+
+
+pubspec.yaml has no lower-bound SDK constraint.
+You should edit pubspec.yaml to contain an SDK constraint:
+
+environment:
+  sdk: '>=2.10.0 <3.0.0'
+
+See https://dart.dev/go/sdk-constraint
