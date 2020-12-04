@@ -1,4 +1,5 @@
-import “exif“;
+import 'package:exif/exif.dart';
+
 main(){
   print("good");
 }
