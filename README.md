@@ -19,3 +19,5 @@ environment:
 See https://dart.dev/go/sdk-constraint
 
 Future 把我搞晕了。 
+
+昨天太累睡着了。 早饭前再看看。 
