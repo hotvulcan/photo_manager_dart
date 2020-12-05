@@ -4,16 +4,21 @@ import 'package:exif/exif.dart';
 
 main(){
   File file = new File("example.jpg");
-  var exif = printExifOf(file);
+  printExifOf(file).then((exif) {
+    // print(exif.toString());
+  });
 
-  print(exif.toString());
+  
 }
 
 Future<Map<String, String>> printExifOf(File file) async {
 
   Map<String, IfdTag> data = await readExifFromBytes(await file.readAsBytes());
-  Map<String, String> ret;
-  data.forEach((key, value) { ret["key"] = value.toString(); });
+  Map<String, String> ret = {};
+  data.forEach((key, value) { ret[key] = value.toString(); });
+  
+  ret.forEach((key, value) {print(key);});
+  return ret;
   // if (data == null || data.isEmpty) {
   //   print("No EXIF information found\n");
   //   return;
