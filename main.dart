@@ -4,9 +4,11 @@ import 'package:exif/exif.dart';
 main(List<String> args) {
   args.forEach((fileName) {
       File file = new File(fileName);
-      getImageInfo(file).then((exif) {
-    print(exif.toString());
-  });
+      if(file.existsSync()){
+        getImageInfo(file).then((exif) {
+          print(exif.toString());
+        });
+      }
   });
 }
 Future<Map<String, String>> getImageInfo(File file) async {
