@@ -3,13 +3,14 @@ import 'dart:io';
 import 'package:exif/exif.dart';
 
 main(){
-  printExifOf("example.jpg");
+  File file = new File("example.jpg");
+  printExifOf(file);
   print("good");
 }
 
-printExifOf(String path) async {
+printExifOf(File file) async {
 
-  Map<String, IfdTag> data = await readExifFromBytes(await new File(path).readAsBytes()) as Map<String, IfdTag>;
+  Map<String, IfdTag> data = await readExifFromBytes(await file.readAsBytes());
   
   if (data == null || data.isEmpty) {
     print("No EXIF information found\n");
