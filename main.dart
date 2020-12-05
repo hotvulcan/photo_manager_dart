@@ -8,6 +8,9 @@ main(List<String> args) {
         getImageInfo(file).then((exif) {
           print(exif.toString());
         });
+      }else{
+        // todo, no such file;
+        ;
       }
   });
 }
