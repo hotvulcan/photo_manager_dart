@@ -37,3 +37,7 @@ Future 把我搞晕了。
 看了 Future 到用法。 改起来。 
 
 1. 现在在函数里面打开文件，取得其它信息需要打开两次。 改。
+
+Map 是怎么用的？
+https://www.tutorialspoint.com/dart_programming/dart_programming_map.htm
+
