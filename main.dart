@@ -8,10 +8,11 @@ main(){
   print("good");
 }
 
-printExifOf(File file) async {
+Map<String, String> printExifOf(File file) async {
 
   Map<String, IfdTag> data = await readExifFromBytes(await file.readAsBytes());
-  
+  Map<String, String> ret;
+  data.forEach((key, value) { ret["key"] = value.toString(); });
   // if (data == null || data.isEmpty) {
   //   print("No EXIF information found\n");
   //   return;
