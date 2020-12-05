@@ -41,3 +41,6 @@ Future 把我搞晕了。
 Map 是怎么用的？
 https://www.tutorialspoint.com/dart_programming/dart_programming_map.htm
 
+async 函数要求返回 Future 
+Functions marked 'async' must have a return type assignable to 'Future'.
+Try fixing the return type of the function, or removing the modifier 'async' from the function 

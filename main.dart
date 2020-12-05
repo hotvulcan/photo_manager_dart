@@ -8,7 +8,7 @@ main(){
   print("good");
 }
 
-Map<String, String> printExifOf(File file) async {
+Future<Map<String, String>> printExifOf(File file) async {
 
   Map<String, IfdTag> data = await readExifFromBytes(await file.readAsBytes());
   Map<String, String> ret;
