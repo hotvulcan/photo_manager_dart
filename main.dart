@@ -4,8 +4,9 @@ import 'package:exif/exif.dart';
 
 main(){
   File file = new File("example.jpg");
-  printExifOf(file);
-  print("good");
+  var exif = printExifOf(file);
+
+  print(exif.toString());
 }
 
 Future<Map<String, String>> printExifOf(File file) async {
@@ -26,9 +27,5 @@ Future<Map<String, String>> printExifOf(File file) async {
   //   print('File has TIFF thumbnail');
   //   data.remove('TIFFThumbnail');
   // }
-
-  for (String key in data.keys) {
-    print("$key (${data[key].tagType}): ${data[key]}");
-  }
   
 }

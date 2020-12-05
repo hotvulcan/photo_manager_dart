@@ -44,3 +44,5 @@ https://www.tutorialspoint.com/dart_programming/dart_programming_map.htm
 async 函数要求返回 Future 
 Functions marked 'async' must have a return type assignable to 'Future'.
 Try fixing the return type of the function, or removing the modifier 'async' from the function 
+
+Receiver: null ... Future 还没来。 继续学习 Future 
