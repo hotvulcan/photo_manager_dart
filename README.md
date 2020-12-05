@@ -45,4 +45,7 @@ async 函数要求返回 Future
 Functions marked 'async' must have a return type assignable to 'Future'.
 Try fixing the return type of the function, or removing the modifier 'async' from the function 
 
-Receiver: null ... Future 还没来。 继续学习 Future 
+Receiver: null ... Future 还没来。 继续学习 Future
+
+文件列表不应该在 dart 里面做。 做到最牛也无非是本系统的 find 的效果，不如用 find 靠谱。 
+所以文件列表在外部读一个文件即可。 
