@@ -23,8 +23,9 @@ Future<Map<String, String>> getImageInfo(File file) async {
 
   Map<String, String> ret = {};
   var fileStat = file.statSync();
-  var samples = containts.sublist(SamplePosition1,SamplePosition1+2) 
-              + containts.sublist(SamplePosition2,SamplePosition2+2);
+  var samples  = containts.sublist(SamplePosition1,SamplePosition1+2) 
+               + containts.sublist(SamplePosition2,SamplePosition2+2);
+
   ret["samples"]  = samples.join("");
   ret['size']     = fileStat.size.toString();
   ret['changed']  = fileStat.changed.toIso8601String();
