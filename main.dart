@@ -9,7 +9,7 @@ main(){
 
 printExifOf(String path) async {
 
-  Map<String, IfdTag> data = readExifFromBytes(await new File(path).readAsBytes()) as Map<String, IfdTag>;
+  Map<String, IfdTag> data = await readExifFromBytes(await new File(path).readAsBytes()) as Map<String, IfdTag>;
 
   if (data == null || data.isEmpty) {
     print("No EXIF information found\n");
