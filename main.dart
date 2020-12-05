@@ -3,7 +3,7 @@ import 'package:exif/exif.dart';
 
 main(List<String> args) {
   args.forEach((fileName) {
-      File file = new File("example.jpg");
+      File file = new File(fileName);
       getImageInfo(file).then((exif) {
     print(exif.toString());
   });
