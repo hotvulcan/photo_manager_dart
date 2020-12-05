@@ -58,3 +58,5 @@ https://stackoverflow.com/questions/9279541/how-do-i-access-argv-command-line-op
 格式化字符串用啥？
 https://pub.dev/packages/sprintf
 不过还是用字符串嵌入吧。。。
+
+会给变量起名字，会使用日期函数，等于学会了嘛。
