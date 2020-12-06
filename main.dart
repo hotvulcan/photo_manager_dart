@@ -2,13 +2,18 @@ import 'dart:io';
 import 'package:exif/exif.dart';
 import 'package:crypto/crypto.dart';
 import 'dart:convert'; // for the utf8.encode method
+import 'dart:async';
 
 const int MinFileSize =  1024*15; // 15k 以下的图片直接算 hash，更大的图片hash字段先空着。
 const int SamplePosition1 = 1024*10;
 const int SamplePosition2 = 1024*12;
 
+test(){
+  File file = File("example.jpg");
+  StreamConsumer()
+}
 main(List<String> args) {
-  
+
   args.forEach((fileName) { 
       File file = new File(fileName);
       if(file.existsSync()){

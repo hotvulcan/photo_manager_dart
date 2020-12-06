@@ -72,4 +72,6 @@ perl -e ”$hash = sha1 all.txt ; if( $hash ne head -1 jobs.txt) {`echo $hash > 
 为了玩dart，我用第一种。
 
 
+遇到问题了，我不知道怎么挨行读一个大型文件。 用readlines 之类读都是一股脑读进内存。 我这样有上百万个文件名（行）的，很容易就把内存撑爆了。 网上资料看上去又都很可疑，怎么会这么笨？
+
 
