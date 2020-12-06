@@ -8,7 +8,7 @@ const int SamplePosition1 = 1024*10;
 const int SamplePosition2 = 1024*12;
 
 main(List<String> args) {
-  args.forEach((fileName) {
+  args.forEach((fileName) { // 目前是在命令行获取参数中的文件名的，我要的是在一个文件清单中获取文件名，改。
       File file = new File(fileName);
       if(file.existsSync()){
         if (file.statSync().size > MinFileSize){
@@ -25,6 +25,8 @@ main(List<String> args) {
       }
   });
 }
+
+
 Future<Map<String, String>> getImageInfo(File file) async {
   Map<String, String> ret = {};
   
