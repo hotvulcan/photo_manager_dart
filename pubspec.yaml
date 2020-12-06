@@ -1,6 +1,7 @@
 name: photoManager
 dependencies:
   exif: 
+  crypto: ^2.1.5
 
 environment:
   sdk: '>=2.10.0 <3.0.0'
