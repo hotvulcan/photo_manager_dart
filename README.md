@@ -67,7 +67,7 @@ https://pub.dev/packages/crypto
 发现 exif 这个库不能拿到视频的metadata，以后再说。
 
 避免重复处理有两个办法，一个是记录当前处理到文件的偏移量，下次重新启动软件的时候从这个偏移量开始。 另一个是记录完成了的文件名，每次启动都从原始文件中刨除完成了的文件，生成任务文件。 当然要先核对原始文件和任务文件的版本，没动过就不用生成。 这样在实际工作中会很方便，因为原始文件总要改的，人类不可靠。。。。  这个部分用个脚本写更容易一些。 大体伪代码如下：
-perl -e ”$hash = sha1 all.txt ; if( $hash ne head -1 jobs.txt) {`echo $hash > jobs.txt && cat all.txt done.txt“ | sort | uniq -c | awk -F '/^1 /' '{print}' | replace /^1\\s// >> jobs.txt && dart main.dart `} else {`dart main.dart`}
+perl -e ”$hash = sha1 all.txt ; if( $hash ne head -1 jobs.txt) {`echo $hash > jobs.txt && cat all.txt done.txt“ | sort | uniq -c | awk -F“ ” '/^1 /' '{$1="";print}' >> jobs.txt && dart main.dart `} else {`dart main.dart`}
 
 为了玩dart，我用第一种。
 
