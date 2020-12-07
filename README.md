@@ -115,3 +115,6 @@ https://stackoverflow.com/questions/41306895/how-do-i-test-if-a-file-is-writable
 
 Future 的异步处理
 https://dart.dev/guides/libraries/futures-error-handling
+
+现在还缺两部分，连接数据库的 web 服务，包含一些逻辑和 flutter 应用。 单机软件本没必要这样搞，但我要把一个普通的 app 所有部分摸一遍，这样拿到的东西才靠谱。
+
