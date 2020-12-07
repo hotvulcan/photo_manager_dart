@@ -19,6 +19,7 @@ environment:
 See https://dart.dev/go/sdk-constraint
 
 Future 把我搞晕了。 
+https://www.tutorialspoint.com/dart_programming/dart_programming_concurrency.htm
 
 昨天太累睡着了。 早饭前再看看。 
 
@@ -58,6 +59,7 @@ https://stackoverflow.com/questions/9279541/how-do-i-access-argv-command-line-op
 格式化字符串用啥？
 https://pub.dev/packages/sprintf
 不过还是用字符串嵌入吧。。。
+https://shailen.github.io/blog/2012/11/14/dart-string-interpolation/
 
 会给变量起名字，会使用日期函数，等于学会了嘛。
 
@@ -73,5 +75,42 @@ perl -e ”$hash = sha1 all.txt ; if( $hash ne head -1 jobs.txt) {`echo $hash > 
 
 
 遇到问题了，我不知道怎么挨行读一个大型文件。 用readlines 之类读都是一股脑读进内存。 我这样有上百万个文件名（行）的，很容易就把内存撑爆了。 网上资料看上去又都很可疑，怎么会这么笨？
+https://api.dart.dev/stable/2.10.4/dart-io/File-class.html
 
+last_job.txt里面还是放明文，对人类友好。
+dart 中怎么parse 一个整数？ https://stackoverflow.com/questions/13167496/how-do-i-parse-a-string-into-a-number-with-dart
 
+forEach 是不能停的，要么用 for，
+void main(){
+  var myList = [12, 18, 24, 63, 84,99];
+
+  myList.forEach((element) {
+   print(element);
+   if (element ==24); //break; // does not work
+  });
+
+ for(var element in myList) {
+    print(element);
+    if (element==24) break;
+   } 
+} 
+要是事先知道条件用：
+List<int> example = [ 1, 2, 3 ];
+int matched = example.firstMatching((e) => e == 2, orElse: () => null);
+要么事先排除不要的原素
+var data = [1, 2, 3];
+data.where((val) => val != 2).forEach(print);
+
+Stream 这里有一篇完整的文章：
+https://saad-eloulladi.medium.com/flutter-dart-streams-4dea3d639bcf
+
+有些视频 metadata 可能可以用这个拿到：
+https://pub.dev/packages/flutter_ffmpeg
+exiftool
+
+写文件
+File(LastJobFile).writeAsStringSync( currentLine.toString(),flush: true );
+https://stackoverflow.com/questions/41306895/how-do-i-test-if-a-file-is-writable-cli
+
+Future 的异步处理
+https://dart.dev/guides/libraries/futures-error-handling
